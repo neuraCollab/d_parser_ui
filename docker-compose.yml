@@ -1,0 +1,28 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    container_name: client_app
+    ports:
+      - "3000:3000"
+  server:
+    build: ./server
+    container_name: server_app
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=password
+  parser:
+    build: ./parser
+    container_name: parser_app
+  db:
+    image: mysql:5.7
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
