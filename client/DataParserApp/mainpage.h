@@ -11,3 +11,6 @@ class MainPage : public QWidget {
 
 public:
     explicit MainPage(QWidget *parent = nullptr);
+
+private slots:
+    void onUploadButtonClicked();
