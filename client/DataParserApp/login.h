@@ -5,3 +5,18 @@
 
 class QLineEdit;
 class QPushButton;
+
+class Login : public QWidget {
+    Q_OBJECT
+
+public:
+    explicit Login(QWidget *parent = nullptr);
+
+private slots:
+    void onLoginButtonClicked();
+
+private:
+    QLineEdit *usernameEdit;
+    QLineEdit *passwordEdit;
+    QPushButton *loginButton;
+};
