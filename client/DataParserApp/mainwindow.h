@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+class QPushButton;
+class QLineEdit;
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
