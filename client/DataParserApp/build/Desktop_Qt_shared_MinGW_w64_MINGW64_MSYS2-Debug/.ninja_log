@@ -1,0 +1,9 @@
+# ninja log v6
+13	1182	7517695628614199	DataPsrser_autogen/timestamp	ab92916f55f8fdfe
+13	1182	7517695628614199	DataPsrser_autogen/mocs_compilation.cpp	ab92916f55f8fdfe
+13	1182	7517695628614199	C:/Users/annap/d_parser_ui/client/DataPsrser/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataPsrser_autogen/timestamp	ab92916f55f8fdfe
+13	1182	7517695628614199	C:/Users/annap/d_parser_ui/client/DataPsrser/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataPsrser_autogen/mocs_compilation.cpp	ab92916f55f8fdfe
+1198	5872	7517695629981299	CMakeFiles/DataPsrser.dir/main.cpp.obj	7a38365368a0e207
+1192	5986	7517695629921232	CMakeFiles/DataPsrser.dir/DataPsrser_autogen/mocs_compilation.cpp.obj	1a4ccb121ce7bb61
+1204	6255	7517695630031282	CMakeFiles/DataPsrser.dir/mainwindow.cpp.obj	df201fe68cb7500
+6255	6633	7517695680553617	DataPsrser.exe	4381665946cae75e
