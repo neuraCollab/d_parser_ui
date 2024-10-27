@@ -14,3 +14,7 @@ public:
 
 private slots:
     void onUploadButtonClicked();
+
+private:
+    QLineEdit *fileLineEdit;
+    QPushButton *uploadButton;
