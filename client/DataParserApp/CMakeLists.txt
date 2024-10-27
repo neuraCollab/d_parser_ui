@@ -23,6 +23,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(DataPsrser
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        login.h login.cpp
+        mainpage.h mainpage.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET DataPsrser APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
