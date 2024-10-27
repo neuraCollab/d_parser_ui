@@ -14,3 +14,4 @@ private:
     void createLoginPage();
     void createMainPage();
 };
+#endif // MAINWINDOW_H
