@@ -18,6 +18,6 @@ private slots:
 private:
     QLineEdit *fileLineEdit;
     QPushButton *uploadButton;
-}
+};
 
 #endif // MAINPAGE_H
