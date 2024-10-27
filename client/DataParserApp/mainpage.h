@@ -6,3 +6,6 @@
 class QPushButton;
 class QLineEdit;
 
+class MainPage : public QWidget {
+    Q_OBJECT
+
