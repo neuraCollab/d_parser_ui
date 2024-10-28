@@ -26,3 +26,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     setLayout(layout);
 }
 
+void Login::onLoginButtonClicked() {
+
+}
+
