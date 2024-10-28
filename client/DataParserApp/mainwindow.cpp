@@ -21,5 +21,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setMinimumSize(800, 600);
     setWindowTitle("Data Parser Application");
 
+    QPalette palette;
+    palette.setColor(QPalette::Window, QColor(255, 182, 193)); // Светло-розовый цвет
+    setPalette(palette);
+
+
 
 }
