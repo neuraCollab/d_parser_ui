@@ -17,6 +17,7 @@ MainPage::MainPage(QWidget *parent) : QWidget(parent) {
 
     connect(uploadButton, &QPushButton::clicked, this, &MainPage::onUploadButtonClicked);
 
-
-
+    setLayout(layout);
 }
+
+
