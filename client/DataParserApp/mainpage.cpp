@@ -15,5 +15,8 @@ MainPage::MainPage(QWidget *parent) : QWidget(parent) {
     uploadButton = new QPushButton("Upload CSV", this);
     layout->addWidget(uploadButton);
 
+    connect(uploadButton, &QPushButton::clicked, this, &MainPage::onUploadButtonClicked);
+
+
 
 }
