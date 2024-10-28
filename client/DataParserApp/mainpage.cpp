@@ -20,4 +20,9 @@ MainPage::MainPage(QWidget *parent) : QWidget(parent) {
     setLayout(layout);
 }
 
+void MainPage::onUploadButtonClicked() {
+    QString fileName = QFileDialog::getOpenFileName(this, "Open CSV File", QString(), "CSV Files (*.csv);;All Files (*)");
+
+
+}
 
