@@ -20,4 +20,5 @@ private:
     QLineEdit *passwordEdit;
     QPushButton *loginButton;
 };
+
 #endif // LOGIN_H

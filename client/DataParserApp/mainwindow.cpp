@@ -6,30 +6,31 @@
 #include <QPalette>
 #include <QPixmap>
 #include <QLabel>
+#include "homepage.h"
+#include "profile.h" // Добавьте это
+#include "register.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-
     QStackedWidget *stackedWidget = new QStackedWidget(this);
     setCentralWidget(stackedWidget);
 
+    HomePage *homePage = new HomePage(stackedWidget);
     Login *loginPage = new Login(stackedWidget);
+    Register *registerPage = new Register(stackedWidget);
+    Profile *profilePage = new Profile(stackedWidget);
     MainPage *mainPage = new MainPage(stackedWidget);
 
+    stackedWidget->addWidget(homePage);
     stackedWidget->addWidget(loginPage);
+    stackedWidget->addWidget(registerPage);
+    stackedWidget->addWidget(profilePage);
     stackedWidget->addWidget(mainPage);
 
     setMinimumSize(800, 600);
     setWindowTitle("Data Parser Application");
 
     QPalette palette;
-    palette.setColor(QPalette::Window, QColor(255, 182, 193)); // Светло-розовый цвет
+    palette.setColor(QPalette::Window, QColor(173, 216, 230)); // Светло-голубой
     setPalette(palette);
-
-    QLabel *background = new QLabel(this);
-    QPixmap pixmap(":/heart.png"); // Загружает изображение heart.png
-    background->setPixmap(pixmap.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
-    background->setScaledContents(true);
-    background->lower(); // Помещаем изображение на задний план
 }
-
 MainWindow::~MainWindow() {}

@@ -1,4 +1,5 @@
 #include "login.h"
+#include "qstackedwidget.h"
 #include <QLineEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -13,11 +14,13 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     usernameEdit->setPlaceholderText("Username");
     layout->addWidget(usernameEdit);
 
+    // Поле ввода пароля
     passwordEdit = new QLineEdit(this);
     passwordEdit->setPlaceholderText("Password");
     passwordEdit->setEchoMode(QLineEdit::Password);
     layout->addWidget(passwordEdit);
 
+    // Кнопка входа
     loginButton = new QPushButton("Login", this);
     layout->addWidget(loginButton);
 
@@ -27,10 +30,12 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 }
 
 void Login::onLoginButtonClicked() {
-    // Логика авторизации
-    if (usernameEdit->text() == "user" && passwordEdit->text() == "pass") { // Пример
+    if (usernameEdit->text() == "user" && passwordEdit->text() == "pass") {
         QMessageBox::information(this, "Success", "Login successful!");
-        // Здесь можно переключиться на главную страницу
+        QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
+        if (stackedWidget) {
+            stackedWidget->setCurrentIndex(4); // Индекс главной страницы
+        }
     } else {
         QMessageBox::warning(this, "Error", "Invalid credentials.");
     }

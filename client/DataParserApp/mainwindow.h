@@ -2,9 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-class QPushButton;
-class QLineEdit;
+#include "homepage.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -12,9 +10,12 @@ class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+private:
+    void createHomePage();
 private:
     void createLoginPage();
     void createMainPage();
 };
+
+
 #endif // MAINWINDOW_H

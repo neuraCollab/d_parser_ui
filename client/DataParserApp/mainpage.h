@@ -1,27 +1,23 @@
-#ifndef HOMEPAGE_H
-#define HOMEPAGE_H
+#ifndef MAINPAGE_H
+#define MAINPAGE_H
 
 #include <QWidget>
 
 class QPushButton;
-class QLabel;
+class QLineEdit;
 
-class HomePage : public QWidget {
+class MainPage : public QWidget {
     Q_OBJECT
 
 public:
-    explicit HomePage(QWidget *parent = nullptr);
+    explicit MainPage(QWidget *parent = nullptr);
 
 private slots:
-    void onLoginButtonClicked();
-    void onRegisterButtonClicked();
-    void onOrderButtonClicked();
+    void onUploadButtonClicked();
 
 private:
-    QPushButton *loginButton;
-    QPushButton *registerButton;
-    QPushButton *orderButton;
-    QLabel *infoLabel;
+    QLineEdit *fileLineEdit;
+    QPushButton *uploadButton;
 };
 
-#endif // HOMEPAGE_H
+#endif // MAINPAGE_H
