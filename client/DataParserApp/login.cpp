@@ -8,4 +8,10 @@
 Login::Login(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout;
 
+    // Поле ввода имени пользователя
+    usernameEdit = new QLineEdit(this);
+    usernameEdit->setPlaceholderText("Username");
+    layout->addWidget(usernameEdit);
+
+
 }
