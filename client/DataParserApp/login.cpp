@@ -6,3 +6,6 @@
 #include <QMessageBox>
 
 Login::Login(QWidget *parent) : QWidget(parent) {
+    QVBoxLayout *layout = new QVBoxLayout;
+
+}
