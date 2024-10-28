@@ -23,6 +23,12 @@ MainPage::MainPage(QWidget *parent) : QWidget(parent) {
 void MainPage::onUploadButtonClicked() {
     QString fileName = QFileDialog::getOpenFileName(this, "Open CSV File", QString(), "CSV Files (*.csv);;All Files (*)");
 
-
+    if (!fileName.isEmpty()) {
+        fileLineEdit->setText(fileName);
+        QMessageBox::information(this, "File Selected", "You selected: " + fileName);
+        // Здесь можно добавить логику обработки CSV файла
+    }
 }
+
+
 
