@@ -8,3 +8,8 @@
 #include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+
+    QStackedWidget *stackedWidget = new QStackedWidget(this);
+    setCentralWidget(stackedWidget);
+
+}
