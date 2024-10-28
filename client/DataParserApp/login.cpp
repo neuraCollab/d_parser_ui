@@ -27,6 +27,12 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 }
 
 void Login::onLoginButtonClicked() {
-
+    // Логика авторизации
+    if (usernameEdit->text() == "user" && passwordEdit->text() == "pass") { // Пример
+        QMessageBox::information(this, "Success", "Login successful!");
+        // Здесь можно переключиться на главную страницу
+    } else {
+        QMessageBox::warning(this, "Error", "Invalid credentials.");
+    }
 }
 
