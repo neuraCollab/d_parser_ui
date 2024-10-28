@@ -30,8 +30,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     background->setPixmap(pixmap.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     background->setScaledContents(true);
     background->lower(); // Помещаем изображение на задний план
-
-
-
-
 }
+
+MainWindow::~MainWindow() {}
