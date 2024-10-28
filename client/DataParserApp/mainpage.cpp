@@ -1,3 +1,6 @@
 #include "mainpage.h"
-
-pages::pages() {}
+#include <QPushButton>
+#include <QLineEdit>
+#include <QVBoxLayout>
+#include <QFileDialog>
+#include <QMessageBox>
