@@ -18,4 +18,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     stackedWidget->addWidget(loginPage);
     stackedWidget->addWidget(mainPage);
 
+    setMinimumSize(800, 600);
+    setWindowTitle("Data Parser Application");
+
+
 }
