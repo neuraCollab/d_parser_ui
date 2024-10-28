@@ -23,5 +23,6 @@ Login::Login(QWidget *parent) : QWidget(parent) {
 
     connect(loginButton, &QPushButton::clicked, this, &Login::onLoginButtonClicked);
 
-
+    setLayout(layout);
 }
+
