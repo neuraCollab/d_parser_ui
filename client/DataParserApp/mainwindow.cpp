@@ -25,6 +25,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     palette.setColor(QPalette::Window, QColor(255, 182, 193)); // Светло-розовый цвет
     setPalette(palette);
 
+    QLabel *background = new QLabel(this);
+    QPixmap pixmap(":/heart.png"); // Загружает изображение heart.png
+    background->setPixmap(pixmap.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+    background->setScaledContents(true);
+    background->lower(); // Помещаем изображение на задний план
+
+
 
 
 }
