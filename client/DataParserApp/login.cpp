@@ -4,3 +4,5 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QMessageBox>
+
+Login::Login(QWidget *parent) : QWidget(parent) {
