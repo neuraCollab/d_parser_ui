@@ -21,7 +21,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     loginButton = new QPushButton("Login", this);
     layout->addWidget(loginButton);
 
-
+    connect(loginButton, &QPushButton::clicked, this, &Login::onLoginButtonClicked);
 
 
 }
