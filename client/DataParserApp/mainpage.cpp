@@ -4,3 +4,6 @@
 #include <QVBoxLayout>
 #include <QFileDialog>
 #include <QMessageBox>
+
+MainPage::MainPage(QWidget *parent) : QWidget(parent) {
+    QVBoxLayout *layout = new QVBoxLayout;
