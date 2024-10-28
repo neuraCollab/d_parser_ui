@@ -7,3 +7,4 @@
 #include <QPixmap>
 #include <QLabel>
 
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
