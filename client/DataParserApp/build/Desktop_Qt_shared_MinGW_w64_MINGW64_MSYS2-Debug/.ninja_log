@@ -1,0 +1,23 @@
+# ninja log v6
+1064	5232	7516629468967524	CMakeFiles/DataParserApp.dir/mainpage.cpp.obj	12d48e22f80aad2
+1041	4595	7516629468602972	CMakeFiles/DataParserApp.dir/DataParserApp_autogen/mocs_compilation.cpp.obj	5590a31f44ced9fe
+340	2913	7516646381615460	CMakeFiles/DataParserApp.dir/mainwindow.cpp.obj	eb8ff66567b8fe08
+2913	3188	7516646407346305	DataParserApp.exe	7e90426eb7540911
+1047	4382	7516629468759344	CMakeFiles/DataParserApp.dir/main.cpp.obj	9d8866764102e640
+57	338	7516646378791829	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/mocs_compilation.cpp	2c4fc1a7a0bf18a2
+57	338	7516646378791829	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/timestamp	2c4fc1a7a0bf18a2
+57	338	7516646378791829	DataParserApp_autogen/mocs_compilation.cpp	2c4fc1a7a0bf18a2
+1058	4852	7516629468916412	CMakeFiles/DataParserApp.dir/login.cpp.obj	dc3b9219d577ee7c
+57	338	7516646378791829	DataParserApp_autogen/timestamp	2c4fc1a7a0bf18a2
+45	1894	7518541471393647	DataParserApp_autogen/timestamp	2c4fc1a7a0bf18a2
+45	1894	7518541471393647	DataParserApp_autogen/mocs_compilation.cpp	2c4fc1a7a0bf18a2
+45	1894	7518541471393647	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/timestamp	2c4fc1a7a0bf18a2
+45	1894	7518541471393647	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/mocs_compilation.cpp	2c4fc1a7a0bf18a2
+1911	8085	7518541473229973	CMakeFiles/DataParserApp.dir/mainwindow.cpp.obj	eb8ff66567b8fe08
+1904	8333	7518541473229973	CMakeFiles/DataParserApp.dir/main.cpp.obj	9d8866764102e640
+1896	8625	7518541473201490	CMakeFiles/DataParserApp.dir/DataParserApp_autogen/mocs_compilation.cpp.obj	5590a31f44ced9fe
+1924	8912	7518541473421860	CMakeFiles/DataParserApp.dir/homepage.cpp.obj	c66ef8277fe66a59
+1931	9091	7518541473547069	CMakeFiles/DataParserApp.dir/register.cpp.obj	b6ce2faa927f65ea
+1918	9151	7518541473421860	CMakeFiles/DataParserApp.dir/login.cpp.obj	dc3b9219d577ee7c
+1938	9966	7518541473547069	CMakeFiles/DataParserApp.dir/profile.cpp.obj	5d4917f0c8839d6a
+9966	10436	7518541553907519	DataParserApp.exe	a335c5e028e2e274
