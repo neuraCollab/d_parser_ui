@@ -12,4 +12,8 @@ MainPage::MainPage(QWidget *parent) : QWidget(parent) {
     fileLineEdit->setPlaceholderText("Select CSV file");
     layout->addWidget(fileLineEdit);
 
+    uploadButton = new QPushButton("Upload CSV", this);
+    layout->addWidget(uploadButton);
+
+
 }
