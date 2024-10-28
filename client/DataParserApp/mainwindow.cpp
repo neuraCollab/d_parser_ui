@@ -15,5 +15,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     Login *loginPage = new Login(stackedWidget);
     MainPage *mainPage = new MainPage(stackedWidget);
 
+    stackedWidget->addWidget(loginPage);
+    stackedWidget->addWidget(mainPage);
 
 }
