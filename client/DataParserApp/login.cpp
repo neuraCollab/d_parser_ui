@@ -13,5 +13,11 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     usernameEdit->setPlaceholderText("Username");
     layout->addWidget(usernameEdit);
 
+    passwordEdit = new QLineEdit(this);
+    passwordEdit->setPlaceholderText("Password");
+    passwordEdit->setEchoMode(QLineEdit::Password);
+    layout->addWidget(passwordEdit);
+
+
 
 }
