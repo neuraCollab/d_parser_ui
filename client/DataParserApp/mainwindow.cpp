@@ -1,14 +1,9 @@
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "login.h"
+#include "mainpage.h"
+#include <QStackedWidget>
+#include <QVBoxLayout>
+#include <QPalette>
+#include <QPixmap>
+#include <QLabel>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
