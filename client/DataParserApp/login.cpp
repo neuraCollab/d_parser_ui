@@ -18,6 +18,10 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     passwordEdit->setEchoMode(QLineEdit::Password);
     layout->addWidget(passwordEdit);
 
+    loginButton = new QPushButton("Login", this);
+    layout->addWidget(loginButton);
+
+
 
 
 }
