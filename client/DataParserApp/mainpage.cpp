@@ -7,3 +7,9 @@
 
 MainPage::MainPage(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout;
+
+    fileLineEdit = new QLineEdit(this);
+    fileLineEdit->setPlaceholderText("Select CSV file");
+    layout->addWidget(fileLineEdit);
+
+}
