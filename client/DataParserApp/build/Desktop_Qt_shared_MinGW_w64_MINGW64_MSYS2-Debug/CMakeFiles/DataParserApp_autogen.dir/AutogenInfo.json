@@ -268,12 +268,6 @@
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/mainpage.h",
-			"MU",
-			"EWIEGA46WW/moc_mainpage.cpp",
-			null
-		],
-		[
 			"C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -382,11 +376,6 @@
 		],
 		[
 			"C:/Users/annap/d_parser_ui/client/DataParserApp/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/mainpage.cpp",
 			"MU",
 			null
 		],

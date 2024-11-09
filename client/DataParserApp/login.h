@@ -13,12 +13,14 @@ public:
     explicit Login(QWidget *parent = nullptr);
 
 private slots:
-    void onLoginButtonClicked();
+    void onLoginButtonClicked();         // Слот для кнопки "Login"
+    void onBackToHomeButtonClicked();    // Слот для кнопки "Назад на главную"
 
 private:
-    QLineEdit *usernameEdit;
-    QLineEdit *passwordEdit;
-    QPushButton *loginButton;
+    QLineEdit *usernameEdit;             // Поле ввода имени пользователя
+    QLineEdit *passwordEdit;             // Поле ввода пароля
+    QPushButton *loginButton;            // Кнопка "Login"
+    QPushButton *backToHomeButton;       // Кнопка "Назад на главную"
 };
 
 #endif // LOGIN_H

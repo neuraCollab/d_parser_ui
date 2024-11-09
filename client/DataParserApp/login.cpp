@@ -3,11 +3,31 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QLabel>
+#include <QHBoxLayout>
 #include <QMessageBox>
 
 Login::Login(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout *layout = new QVBoxLayout;
+    // Основная компоновка страницы
+    QVBoxLayout *layout = new QVBoxLayout(this);
+
+    // Горизонтальная компоновка для размещения кнопки слева
+    QHBoxLayout *topLayout = new QHBoxLayout;
+
+    // Создаем кнопку "Назад на главную"
+    QPushButton *backToHomeButton = new QPushButton("Назад на главную", this);
+    backToHomeButton->setStyleSheet("background-color: white; color: black;"); // Устанавливаем стиль кнопки
+
+    // Подключаем слот для обработки нажатия
+    connect(backToHomeButton, &QPushButton::clicked, this, &Login::onBackToHomeButtonClicked);
+
+    // Добавляем кнопку в левую часть горизонтальной компоновки
+    topLayout->addWidget(backToHomeButton, 0, Qt::AlignLeft);
+
+    // Добавляем отступ в правую часть горизонтальной компоновки, чтобы кнопка оставалась слева
+    topLayout->addStretch();
+
+    // Добавляем горизонтальную компоновку в основную вертикальную
+    layout->addLayout(topLayout);
 
     // Поле ввода имени пользователя
     usernameEdit = new QLineEdit(this);
@@ -24,6 +44,7 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     loginButton = new QPushButton("Login", this);
     layout->addWidget(loginButton);
 
+    // Подключаем сигнал для кнопки входа
     connect(loginButton, &QPushButton::clicked, this, &Login::onLoginButtonClicked);
 
     setLayout(layout);
@@ -34,10 +55,17 @@ void Login::onLoginButtonClicked() {
         QMessageBox::information(this, "Success", "Login successful!");
         QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
         if (stackedWidget) {
-            stackedWidget->setCurrentIndex(4); // Индекс главной страницы
+            stackedWidget->setCurrentIndex(4); // Индекс страницы после успешного входа
         }
     } else {
         QMessageBox::warning(this, "Error", "Invalid credentials.");
     }
 }
 
+// Слот для кнопки возврата на главную страницу
+void Login::onBackToHomeButtonClicked() {
+    QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
+    if (stackedWidget) {
+        stackedWidget->setCurrentIndex(0); // Переключаемся на главную страницу
+    }
+}

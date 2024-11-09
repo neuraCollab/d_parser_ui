@@ -1,4 +1,5 @@
 #include "profile.h"
+#include "qstackedwidget.h"
 #include <QTextEdit>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -6,7 +7,27 @@
 #include <QMessageBox>
 
 Profile::Profile(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout *layout = new QVBoxLayout;
+    // Основная компоновка страницы
+    QVBoxLayout *layout = new QVBoxLayout(this);
+
+    // Горизонтальная компоновка для размещения кнопки слева
+    QHBoxLayout *topLayout = new QHBoxLayout;
+
+    // Создаем кнопку "Назад на главную"
+    QPushButton *backToHomeButton = new QPushButton("Назад на главную", this);
+    backToHomeButton->setStyleSheet("background-color: white; color: black;"); // Устанавливаем стиль кнопки
+
+    // Подключаем слот для обработки нажатия
+    connect(backToHomeButton, &QPushButton::clicked, this, &Profile::onBackToHomeButtonClicked);
+
+    // Добавляем кнопку в левую часть горизонтальной компоновки
+    topLayout->addWidget(backToHomeButton, 0, Qt::AlignLeft);
+
+    // Добавляем отступ в правую часть горизонтальной компоновки, чтобы кнопка оставалась слева
+    topLayout->addStretch();
+
+    // Добавляем горизонтальную компоновку в основную вертикальную
+    layout->addLayout(topLayout);
 
     descriptionEdit = new QTextEdit(this);
     descriptionEdit->setPlaceholderText("Введите описание заказа...");
@@ -37,4 +58,12 @@ void Profile::onSubmitButtonClicked() {
     }
 
     QMessageBox::information(this, "Успех", "Ваш заказ успешно отправлен!");
+}
+
+// Слот для кнопки возврата на главную страницу
+void Profile::onBackToHomeButtonClicked() {
+    QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
+    if (stackedWidget) {
+        stackedWidget->setCurrentIndex(0); // Переключаемся на главную страницу
+    }
 }

@@ -9,6 +9,7 @@
 #include "homepage.h"
 #include "profile.h"
 #include "register.h"
+#include "aboutpage.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     QStackedWidget *stackedWidget = new QStackedWidget(this);
@@ -18,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     Login *loginPage = new Login(stackedWidget);
     Register *registerPage = new Register(stackedWidget);
     Profile *profilePage = new Profile(stackedWidget);
-    MainPage *mainPage = new MainPage(stackedWidget);
+    AboutPage *mainPage = new AboutPage(stackedWidget);
 
     stackedWidget->addWidget(homePage);
     stackedWidget->addWidget(loginPage);
