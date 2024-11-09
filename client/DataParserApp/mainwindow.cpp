@@ -7,7 +7,7 @@
 #include <QPixmap>
 #include <QLabel>
 #include "homepage.h"
-#include "profile.h" // Добавьте это
+#include "profile.h"
 #include "register.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowTitle("Data Parser Application");
 
     QPalette palette;
-    palette.setColor(QPalette::Window, QColor(173, 216, 230)); // Светло-голубой
+    palette.setColor(QPalette::Window, QColor(255, 255, 255)); // бэлый
     setPalette(palette);
 }
 MainWindow::~MainWindow() {}

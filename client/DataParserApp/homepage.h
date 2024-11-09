@@ -16,12 +16,12 @@ private slots:
     void onLoginButtonClicked();
     void onRegisterButtonClicked();
     void onOrderButtonClicked();
+    void onAboutButtonClicked(); // Слот для кнопки "О нас"
 
 private:
     QPushButton *loginButton;
     QPushButton *registerButton;
     QPushButton *orderButton;
-    QLabel *aboutLabel;
 };
 
 #endif // HOMEPAGE_H

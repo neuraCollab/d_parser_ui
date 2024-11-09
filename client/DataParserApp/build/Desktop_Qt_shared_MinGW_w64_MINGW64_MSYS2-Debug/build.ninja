@@ -113,6 +113,14 @@ build CMakeFiles/DataParserApp.dir/profile.cpp.obj: CXX_COMPILER__DataParserApp_
   OBJECT_DIR = CMakeFiles\DataParserApp.dir
   OBJECT_FILE_DIR = CMakeFiles\DataParserApp.dir
 
+build CMakeFiles/DataParserApp.dir/aboutpage.cpp.obj: CXX_COMPILER__DataParserApp_unscanned_Debug C$:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.cpp || cmake_object_order_depends_target_DataParserApp
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\DataParserApp.dir\aboutpage.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/include -isystem C:/msys64/mingw64/include/qt6/QtCore -isystem C:/msys64/mingw64/include/qt6 -isystem C:/msys64/mingw64/share/qt6/mkspecs/win32-g++ -isystem C:/msys64/mingw64/include/qt6/QtWidgets -isystem C:/msys64/mingw64/include/qt6/QtGui
+  OBJECT_DIR = CMakeFiles\DataParserApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\DataParserApp.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DataParserApp
@@ -121,7 +129,7 @@ build CMakeFiles/DataParserApp.dir/profile.cpp.obj: CXX_COMPILER__DataParserApp_
 #############################################
 # Link the executable DataParserApp.exe
 
-build DataParserApp.exe: CXX_EXECUTABLE_LINKER__DataParserApp_Debug CMakeFiles/DataParserApp.dir/DataParserApp_autogen/mocs_compilation.cpp.obj CMakeFiles/DataParserApp.dir/main.cpp.obj CMakeFiles/DataParserApp.dir/mainwindow.cpp.obj CMakeFiles/DataParserApp.dir/login.cpp.obj CMakeFiles/DataParserApp.dir/mainpage.cpp.obj CMakeFiles/DataParserApp.dir/homepage.cpp.obj CMakeFiles/DataParserApp.dir/register.cpp.obj CMakeFiles/DataParserApp.dir/profile.cpp.obj | C$:/msys64/mingw64/lib/libQt6Widgets.dll.a C$:/msys64/mingw64/lib/libQt6Gui.dll.a C$:/msys64/mingw64/lib/libQt6Core.dll.a C$:/msys64/mingw64/lib/libQt6EntryPoint.a || DataParserApp_autogen DataParserApp_autogen_timestamp_deps
+build DataParserApp.exe: CXX_EXECUTABLE_LINKER__DataParserApp_Debug CMakeFiles/DataParserApp.dir/DataParserApp_autogen/mocs_compilation.cpp.obj CMakeFiles/DataParserApp.dir/main.cpp.obj CMakeFiles/DataParserApp.dir/mainwindow.cpp.obj CMakeFiles/DataParserApp.dir/login.cpp.obj CMakeFiles/DataParserApp.dir/mainpage.cpp.obj CMakeFiles/DataParserApp.dir/homepage.cpp.obj CMakeFiles/DataParserApp.dir/register.cpp.obj CMakeFiles/DataParserApp.dir/profile.cpp.obj CMakeFiles/DataParserApp.dir/aboutpage.cpp.obj | C$:/msys64/mingw64/lib/libQt6Widgets.dll.a C$:/msys64/mingw64/lib/libQt6Gui.dll.a C$:/msys64/mingw64/lib/libQt6Core.dll.a C$:/msys64/mingw64/lib/libQt6EntryPoint.a || DataParserApp_autogen DataParserApp_autogen_timestamp_deps
   FLAGS = -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/msys64/mingw64/lib/libQt6Widgets.dll.a  C:/msys64/mingw64/lib/libQt6Gui.dll.a  C:/msys64/mingw64/lib/libQt6Core.dll.a  -lmpr  -luserenv  -lmingw32  C:/msys64/mingw64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

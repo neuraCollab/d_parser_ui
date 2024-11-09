@@ -250,6 +250,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.h",
+			"MU",
+			"EWIEGA46WW/moc_aboutpage.cpp",
+			null
+		],
+		[
 			"C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.h",
 			"MU",
 			"EWIEGA46WW/moc_homepage.cpp",
@@ -359,6 +365,11 @@
 	"SETTINGS_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/DataParserApp_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.cpp",
 			"MU",

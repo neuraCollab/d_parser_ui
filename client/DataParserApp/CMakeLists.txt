@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         homepage.h homepage.cpp
         register.h register.cpp
         profile.h profile.cpp
+        aboutpage.h aboutpage.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -1,57 +1,74 @@
 #include "homepage.h"
-#include "qstackedwidget.h"
+#include <QStackedWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QLabel>
-#include <QPixmap>
-#include <QDesktopServices>
-#include <QUrl>
+#include <QFont>
 #include <QPalette>
+#include <QGradient>
+#include <QLinearGradient>
 
 HomePage::HomePage(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout *layout = new QVBoxLayout;
-
-    // Стиль фона
+    // Устанавливаем белый фон
     QPalette palette;
-    palette.setColor(QPalette::Window, QColor(173, 216, 230)); // Светло-голубой
+    palette.setColor(QPalette::Window, QColor(Qt::white));
     setPalette(palette);
 
-    // Текст о нас
-    aboutLabel = new QLabel("Аня, Миша, Даня и Олег, вот они - выжившие группы 17", this);
-    aboutLabel->setAlignment(Qt::AlignCenter);
-    aboutLabel->setStyleSheet("font-weight: bold; color: darkblue; font-size: 16px;");
-    layout->addWidget(aboutLabel);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
 
-    // Кнопка входа
+    // Верхняя панель с логотипом и кнопками
+    QHBoxLayout *topLayout = new QHBoxLayout;
+
+    // Логотип "HWParser" с необычным стилем
+    QLabel *logoLabel = new QLabel("HWParser", this);
+    QFont logoFont("Arial", 16, QFont::Bold); // Настройка шрифта
+    logoLabel->setFont(logoFont);
+
+    // Градиент для текста логотипа (если поддерживается)
+    QPalette logoPalette;
+    QLinearGradient gradient(0, 0, 100, 0);
+    gradient.setColorAt(0, QColor(128, 0, 128));  // Фиолетовый
+    gradient.setColorAt(1, QColor(186, 85, 211)); // Светло-фиолетовый
+    logoPalette.setBrush(QPalette::WindowText, gradient);
+    logoLabel->setPalette(logoPalette);
+
+    topLayout->addWidget(logoLabel);
+
+    // Кнопка "О нас"
+    QPushButton *aboutButton = new QPushButton("О нас", this);
+    aboutButton->setStyleSheet("background-color: white; color: black;");
+    connect(aboutButton, &QPushButton::clicked, this, &HomePage::onAboutButtonClicked);
+    topLayout->addWidget(aboutButton);
+
+    // Добавление кнопок Войти и Зарегистрироваться в верхний правый угол
     loginButton = new QPushButton("Войти", this);
-    loginButton->setStyleSheet("background-color: lightblue; color: darkblue;");
-    connect(loginButton, &QPushButton::clicked, this, &HomePage::onLoginButtonClicked);
-    layout->addWidget(loginButton);
-
-    // Кнопка регистрации
+    loginButton->setStyleSheet("background-color: white; color: black;");
     registerButton = new QPushButton("Зарегистрироваться", this);
-    registerButton->setStyleSheet("background-color: lightblue; color: darkblue;");
+    registerButton->setStyleSheet("background-color: purple; color: white;");
+
+    connect(loginButton, &QPushButton::clicked, this, &HomePage::onLoginButtonClicked);
     connect(registerButton, &QPushButton::clicked, this, &HomePage::onRegisterButtonClicked);
-    layout->addWidget(registerButton);
 
-    // Кнопка "Сделать заказ"
+    topLayout->addStretch();
+    topLayout->addWidget(loginButton);
+    topLayout->addWidget(registerButton);
+
+    mainLayout->addLayout(topLayout);
+
+    // Кнопка "Сделать заказ" в центре
     orderButton = new QPushButton("Сделать заказ", this);
-    orderButton->setStyleSheet("background-color: lightblue; color: darkblue;");
+    orderButton->setStyleSheet("background-color: purple; color: white;");
     connect(orderButton, &QPushButton::clicked, this, &HomePage::onOrderButtonClicked);
-    layout->addWidget(orderButton);
 
-    // Фоновое изображение
-    QLabel *imageLabel = new QLabel(this);
-    QPixmap pixmap("C:/Users/annap/Downloads/Telegram Desktop/photo_2024-10-28_20-53-09.jpg");
-    imageLabel->setPixmap(pixmap.scaled(200, 200, Qt::KeepAspectRatio));
-    imageLabel->setStyleSheet("border: 1px solid black;"); // Рамка для изображения
-    layout->addWidget(imageLabel);
+    mainLayout->addStretch();
+    mainLayout->addWidget(orderButton, 0, Qt::AlignCenter);
+    mainLayout->addStretch();
 
-    setLayout(layout);
+    setLayout(mainLayout);
 }
 
 void HomePage::onLoginButtonClicked() {
-    // Логика перехода на страницу авторизации
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
     if (stackedWidget) {
         stackedWidget->setCurrentIndex(1); // Индекс страницы входа
@@ -59,7 +76,6 @@ void HomePage::onLoginButtonClicked() {
 }
 
 void HomePage::onRegisterButtonClicked() {
-    // Логика перехода на страницу регистрации
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
     if (stackedWidget) {
         stackedWidget->setCurrentIndex(2); // Индекс страницы регистрации
@@ -67,10 +83,15 @@ void HomePage::onRegisterButtonClicked() {
 }
 
 void HomePage::onOrderButtonClicked() {
-    // Логика перехода в личный кабинет
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
     if (stackedWidget) {
-        stackedWidget->setCurrentIndex(3); // Индекс личного кабинета
+        stackedWidget->setCurrentIndex(3); // Индекс страницы личного кабинета
     }
 }
 
+void HomePage::onAboutButtonClicked() {
+    QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
+    if (stackedWidget) {
+        stackedWidget->setCurrentIndex(4); // Индекс страницы "О нас"
+    }
+}

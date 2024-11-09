@@ -1,5 +1,7 @@
 DataParserApp_autogen/timestamp: \
 	C:/Users/annap/d_parser_ui/client/DataParserApp/CMakeLists.txt \
+	C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.cpp \
+	C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.h \
 	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeCXXCompiler.cmake \
 	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeRCCompiler.cmake \
