@@ -31,10 +31,12 @@ Profile::Profile(QWidget *parent) : QWidget(parent) {
 
     descriptionEdit = new QTextEdit(this);
     descriptionEdit->setPlaceholderText("Введите описание заказа...");
+    descriptionEdit->setStyleSheet("background-color: white; color: black;");
     layout->addWidget(descriptionEdit);
 
     // Поле для загрузки файлов
     QPushButton *uploadFilesButton = new QPushButton("Загрузить файлы", this);
+    uploadFilesButton->setStyleSheet("background-color: lightblue; color: black;");
     connect(uploadFilesButton, &QPushButton::clicked, [this]() {
         QStringList fileNames = QFileDialog::getOpenFileNames(this, "Выберите файлы", QString(), "CSV Files (*.csv);;JSON Files (*.json)");
         if (!fileNames.isEmpty()) {
@@ -44,6 +46,7 @@ Profile::Profile(QWidget *parent) : QWidget(parent) {
     layout->addWidget(uploadFilesButton);
 
     submitButton = new QPushButton("Отправить заказ", this);
+    submitButton->setStyleSheet("background-color: lightblue; color: black;");
     connect(submitButton, &QPushButton::clicked, this, &Profile::onSubmitButtonClicked);
     layout->addWidget(submitButton);
 

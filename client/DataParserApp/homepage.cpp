@@ -25,7 +25,7 @@ HomePage::HomePage(QWidget *parent) : QWidget(parent) {
     QFont logoFont("Arial", 16, QFont::Bold); // Настройка шрифта
     logoLabel->setFont(logoFont);
 
-    // Градиент для текста логотипа (если поддерживается)
+    // Градиент для текста логотипа
     QPalette logoPalette;
     QLinearGradient gradient(0, 0, 100, 0);
     gradient.setColorAt(0, QColor(128, 0, 128));  // Фиолетовый

@@ -31,15 +31,18 @@ Register::Register(QWidget *parent) : QWidget(parent) {
 
     nameEdit = new QLineEdit(this);
     nameEdit->setPlaceholderText("Ваше имя");
+    nameEdit->setStyleSheet("background-color: white; color: black;");
     layout->addWidget(nameEdit);
 
     emailEdit = new QLineEdit(this);
     emailEdit->setPlaceholderText("Email");
+    emailEdit->setStyleSheet("background-color: white; color: black;");
     layout->addWidget(emailEdit);
 
     passwordEdit = new QLineEdit(this);
     passwordEdit->setPlaceholderText("Пароль");
     passwordEdit->setEchoMode(QLineEdit::Password);
+    passwordEdit->setStyleSheet("background-color: white; color: black;");
     layout->addWidget(passwordEdit);
 
     registerButton = new QPushButton("Зарегистрироваться", this);

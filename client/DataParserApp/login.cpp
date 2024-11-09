@@ -32,17 +32,26 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     // Поле ввода имени пользователя
     usernameEdit = new QLineEdit(this);
     usernameEdit->setPlaceholderText("Username");
+    usernameEdit->setStyleSheet("background-color: white; color: black;"); // Устанавливаем стиль поля ввода
     layout->addWidget(usernameEdit);
 
     // Поле ввода пароля
     passwordEdit = new QLineEdit(this);
     passwordEdit->setPlaceholderText("Password");
     passwordEdit->setEchoMode(QLineEdit::Password);
+    passwordEdit->setStyleSheet("background-color: white; color: black;"); // Устанавливаем стиль поля ввода
     layout->addWidget(passwordEdit);
 
     // Кнопка входа
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
     loginButton = new QPushButton("Login", this);
+    loginButton->setStyleSheet("background-color: lightblue; color: darkblue;");
+    loginButton->setFixedSize(100, 30);
+    buttonLayout->addStretch();         // Отступ слева
+    buttonLayout->addWidget(loginButton, 0, Qt::AlignCenter); // Центрируем кнопку
+    buttonLayout->addStretch();         // Отступ справа
     layout->addWidget(loginButton);
+
 
     // Подключаем сигнал для кнопки входа
     connect(loginButton, &QPushButton::clicked, this, &Login::onLoginButtonClicked);
