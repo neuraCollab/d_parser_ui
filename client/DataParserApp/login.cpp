@@ -1,12 +1,19 @@
 #include "login.h"
+#include "qlineedit.h"
+#include "qpushbutton.h"
 #include "qstackedwidget.h"
-#include <QLineEdit>
-#include <QPushButton>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QMessageBox>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QUrlQuery>
 
-Login::Login(QWidget *parent) : QWidget(parent) {
+Login::Login(QWidget *parent) : QWidget(parent), authManager(nullptr) {
+    // Инициализация QNetworkAccessManager
+    networkManager = new QNetworkAccessManager(this);
+
     // Основная компоновка страницы
     QVBoxLayout *layout = new QVBoxLayout(this);
 
@@ -52,23 +59,53 @@ Login::Login(QWidget *parent) : QWidget(parent) {
     buttonLayout->addStretch();         // Отступ справа
     layout->addWidget(loginButton);
 
-
     // Подключаем сигнал для кнопки входа
     connect(loginButton, &QPushButton::clicked, this, &Login::onLoginButtonClicked);
 
     setLayout(layout);
 }
 
+void Login::setAuthManager(AuthManager *authManager) {
+    this->authManager = authManager;
+}
+
 void Login::onLoginButtonClicked() {
-    if (usernameEdit->text() == "user" && passwordEdit->text() == "pass") {
-        QMessageBox::information(this, "Success", "Login successful!");
-        QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
-        if (stackedWidget) {
-            stackedWidget->setCurrentIndex(4); // Индекс страницы после успешного входа
-        }
+    QString username = usernameEdit->text();
+    QString password = passwordEdit->text();
+
+    // Проверяем, есть ли authManager и вызываем метод логина
+    if (authManager) {
+        authManager->login(username, password);
     } else {
-        QMessageBox::warning(this, "Error", "Invalid credentials.");
+        QMessageBox::warning(this, "Ошибка", "Не удалось выполнить вход. authManager не инициализирован.");
     }
+}
+
+void Login::sendLoginRequest(const QString &username, const QString &password) {
+    QUrl url("https://example.com/api/login"); // Адрес сервера
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+
+    QUrlQuery params;
+    params.addQueryItem("username", username);
+    params.addQueryItem("password", password);
+
+    // Подключаем слот для обработки ответа
+    connect(networkManager, &QNetworkAccessManager::finished, this, &Login::onLoginFinished);
+
+    // Отправляем запрос POST
+    networkManager->post(request, params.toString(QUrl::FullyEncoded).toUtf8());
+}
+
+void Login::onLoginFinished(QNetworkReply *reply) {
+    if (reply->error() == QNetworkReply::NoError) {
+        QString token = reply->readAll(); // Обработка успешного ответа
+        AuthManager::saveToken(token);
+        QMessageBox::information(this, "Успех", "Авторизация успешна!");
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Ошибка авторизации.");
+    }
+    reply->deleteLater();
 }
 
 // Слот для кнопки возврата на главную страницу

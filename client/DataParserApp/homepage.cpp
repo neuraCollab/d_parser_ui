@@ -8,6 +8,8 @@
 #include <QPalette>
 #include <QGradient>
 #include <QLinearGradient>
+#include <QMessageBox>
+#include "authmanager.h"
 
 HomePage::HomePage(QWidget *parent) : QWidget(parent) {
     // Устанавливаем белый фон
@@ -83,11 +85,16 @@ void HomePage::onRegisterButtonClicked() {
 }
 
 void HomePage::onOrderButtonClicked() {
-    QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
-    if (stackedWidget) {
-        stackedWidget->setCurrentIndex(3); // Индекс страницы личного кабинета
+    if (AuthManager::isUserAuthenticated()) {
+        QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
+        if (stackedWidget) {
+            stackedWidget->setCurrentIndex(3); // Переход в личный кабинет
+        }
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Необходимо авторизоваться.");
     }
 }
+
 
 void HomePage::onAboutButtonClicked() {
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());

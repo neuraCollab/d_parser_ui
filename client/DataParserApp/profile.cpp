@@ -5,6 +5,10 @@
 #include <QVBoxLayout>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QHttpMultiPart>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QFile>
 
 Profile::Profile(QWidget *parent) : QWidget(parent) {
     // Основная компоновка страницы
@@ -60,7 +64,39 @@ void Profile::onSubmitButtonClicked() {
         return;
     }
 
-    QMessageBox::information(this, "Успех", "Ваш заказ успешно отправлен!");
+    QHttpMultiPart *multiPart = new QHttpMultiPart(QHttpMultiPart::FormDataType);
+
+    QHttpPart textPart;
+    textPart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"description\""));
+    textPart.setBody(description.toUtf8());
+
+    QHttpPart filePart;
+    filePart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"file\"; filename=\"config.json\""));
+    QFile *file = new QFile("/path/to/config.json");  // Укажите путь к файлу
+    if (!file->open(QIODevice::ReadOnly)) {
+        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл.");
+        delete multiPart;
+        return;
+    }
+    filePart.setBodyDevice(file);
+    file->setParent(multiPart);
+    multiPart->append(textPart);
+    multiPart->append(filePart);
+
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    QNetworkRequest request(QUrl("https://example.com/api/upload"));
+
+    QNetworkReply *reply = manager->post(request, multiPart);
+    multiPart->setParent(reply); // multiPart удалится вместе с reply
+
+    connect(reply, &QNetworkReply::finished, this, [reply]() {
+        if (reply->error() == QNetworkReply::NoError) {
+            QMessageBox::information(nullptr, "Успех", "Файл успешно отправлен!");
+        } else {
+            QMessageBox::warning(nullptr, "Ошибка", "Ошибка при отправке файла.");
+        }
+        reply->deleteLater();
+    });
 }
 
 // Слот для кнопки возврата на главную страницу

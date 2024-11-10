@@ -1,6 +1,6 @@
 C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.h \
   C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h \
-  C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.h \
+  C:/Users/annap/d_parser_ui/client/DataParserApp/authmanager.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -188,6 +188,15 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/pthread_signal.h \
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/pthread_unistd.h \
+  C:/msys64/mingw64/include/qt6/QtCore/QFlags \
+  C:/msys64/mingw64/include/qt6/QtCore/QIODevice \
+  C:/msys64/mingw64/include/qt6/QtCore/QList \
+  C:/msys64/mingw64/include/qt6/QtCore/QMetaType \
+  C:/msys64/mingw64/include/qt6/QtCore/QObject \
+  C:/msys64/mingw64/include/qt6/QtCore/QSharedDataPointer \
+  C:/msys64/mingw64/include/qt6/QtCore/QString \
+  C:/msys64/mingw64/include/qt6/QtCore/QUrl \
+  C:/msys64/mingw64/include/qt6/QtCore/QVariant \
   C:/msys64/mingw64/include/qt6/QtCore/q20functional.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20memory.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20type_traits.h \
@@ -206,6 +215,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qbytearrayalgorithms.h \
   C:/msys64/mingw64/include/qt6/QtCore/qbytearraylist.h \
   C:/msys64/mingw64/include/qt6/QtCore/qbytearrayview.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcalendar.h \
   C:/msys64/mingw64/include/qt6/QtCore/qchar.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcompare.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcompare_impl.h \
@@ -217,8 +227,10 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qcontainerinfo.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcontainertools_impl.h \
   C:/msys64/mingw64/include/qt6/QtCore/qcontiguouscache.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qcryptographichash.h \
   C:/msys64/mingw64/include/qt6/QtCore/qdarwinhelpers.h \
   C:/msys64/mingw64/include/qt6/QtCore/qdatastream.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qdatetime.h \
   C:/msys64/mingw64/include/qt6/QtCore/qdebug.h \
   C:/msys64/mingw64/include/qt6/QtCore/qendian.h \
   C:/msys64/mingw64/include/qt6/QtCore/qexceptionhandling.h \
@@ -232,12 +244,14 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qglobalstatic.h \
   C:/msys64/mingw64/include/qt6/QtCore/qhash.h \
   C:/msys64/mingw64/include/qt6/QtCore/qhashfunctions.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qiodevice.h \
   C:/msys64/mingw64/include/qt6/QtCore/qiodevicebase.h \
   C:/msys64/mingw64/include/qt6/QtCore/qiterable.h \
   C:/msys64/mingw64/include/qt6/QtCore/qiterator.h \
   C:/msys64/mingw64/include/qt6/QtCore/qlatin1stringview.h \
   C:/msys64/mingw64/include/qt6/QtCore/qline.h \
   C:/msys64/mingw64/include/qt6/QtCore/qlist.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qlocale.h \
   C:/msys64/mingw64/include/qt6/QtCore/qlogging.h \
   C:/msys64/mingw64/include/qt6/QtCore/qmalloc.h \
   C:/msys64/mingw64/include/qt6/QtCore/qmap.h \
@@ -299,6 +313,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qtversionchecks.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtypeinfo.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtypes.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qurl.h \
   C:/msys64/mingw64/include/qt6/QtCore/qutf8stringview.h \
   C:/msys64/mingw64/include/qt6/QtCore/qvariant.h \
   C:/msys64/mingw64/include/qt6/QtCore/qvarlengtharray.h \
@@ -330,8 +345,27 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtGui/qtransform.h \
   C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs.h \
   C:/msys64/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/QNetworkAccessManager \
+  C:/msys64/mingw64/include/qt6/QtNetwork/QNetworkReply \
+  C:/msys64/mingw64/include/qt6/QtNetwork/QNetworkRequest \
+  C:/msys64/mingw64/include/qt6/QtNetwork/QSslConfiguration \
+  C:/msys64/mingw64/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qabstractsocket.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qhostaddress.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkaccessmanager.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkreply.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkrequest.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qssl.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qsslcertificate.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qsslconfiguration.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qsslerror.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qsslsocket.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qtcpsocket.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qtnetwork-config.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qtnetworkexports.h \
+  C:/msys64/mingw64/include/qt6/QtNetwork/qtnetworkglobal.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/QMainWindow \
-  C:/msys64/mingw64/include/qt6/QtWidgets/QWidget \
   C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
   C:/msys64/mingw64/include/qt6/QtWidgets/qtabwidget.h \
