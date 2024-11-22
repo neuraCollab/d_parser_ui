@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "authmanager.h"
 #include <QMainWindow>
-#include "homepage.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -14,7 +14,8 @@ private:
     void createHomePage();
 private:
     void createLoginPage();
-    void createMainPage();
+private:
+    AuthManager *authManager;
 };
 
 

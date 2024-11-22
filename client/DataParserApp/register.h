@@ -14,12 +14,14 @@ public:
 
 private slots:
     void onRegisterButtonClicked();
+    void onBackToHomeButtonClicked();
 
 private:
     QLineEdit *nameEdit;
     QLineEdit *emailEdit;
     QLineEdit *passwordEdit;
     QPushButton *registerButton;
+    QPushButton *backToHomeButton;
 };
 
 #endif // REGISTER_H

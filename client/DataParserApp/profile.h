@@ -15,10 +15,12 @@ public:
 
 private slots:
     void onSubmitButtonClicked();
+    void onBackToHomeButtonClicked();
 
 private:
     QTextEdit *descriptionEdit;
     QPushButton *submitButton;
+    QPushButton *backToHomeButton;
 };
 
 #endif // PROFILE_H
