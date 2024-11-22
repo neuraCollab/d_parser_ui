@@ -1,3 +1,0 @@
-curl -X POST http://localhost:8080 -H "Authorization: Bearer <your_token>" \
-     -H "Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" \
-     --data-binary "@/path/to/your/file.xlsx"

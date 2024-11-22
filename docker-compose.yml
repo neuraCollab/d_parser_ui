@@ -1,28 +1,40 @@
-version: '3'
+version: '3.8'
+
 services:
   client:
     build: ./client
     container_name: client_app
     ports:
-      - "3000:3000"
+      - "${CLIENT_PORT}:3000"
+    depends_on:
+      - server
+    environment:
+      - QT_VERSION_MAJOR=${QT_VERSION_MAJOR}
+
   server:
     build: ./server
     container_name: server_app
     ports:
-      - "8080:8080"
+      - "${SERVER_PORT}:8080"
+    depends_on:
+      - db
     environment:
-      - DB_HOST=db
-      - DB_USER=root
-      - DB_PASS=password
-  parser:
-    build: ./parser
-    container_name: parser_app
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+
+  # parser:
+  #   build: ./parser
+  #   container_name: parser_app
+  #   depends_on:
+  #     - server
+
   db:
     image: mysql:5.7
     container_name: db
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "3306:3306"
+      - "${DB_PORT}:3306"
