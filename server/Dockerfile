@@ -35,3 +35,4 @@ cmake --build build
 rm -rf ./build/
 
 # https://learn.microsoft.com/ru-ru/vcpkg/get_started/get-started?pivots=shell-powershell
+# https://github.com/carlonluca/docker-qt
