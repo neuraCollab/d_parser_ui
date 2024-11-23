@@ -1,33 +1,37 @@
-# Базовый образ для сборки Qt-приложений
-FROM ubuntu:22.04
+apt-get update
+apt-get install curl zip unzip tar
+git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+ ./bootstrap-vcpkg.sh
+cd ..
+vcpkg install libenvpp
 
-# Установить необходимые зависимости
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    qtbase5-dev \
-    qt5-qmake \
-    libqt5sql5 \
-    libqt5network5 \
-    g++ \
-    curl \
-    && apt-get clean
+vcpkg integrate install
 
-# Указать рабочую директорию
-WORKDIR /app
 
-# Копировать весь проект в контейнер
-COPY . /app
+mkdir build && cd build
+cmake -DCMAKE_TOOLCHAIN_FILE=/app/vcpkg/scripts/buildsystems/vcpkg.cmake ..
 
-# Создать директорию для сборки
-RUN mkdir build
+make
+./QtServerApp
 
-# Перейти в директорию сборки, выполнить CMake и сборку
-WORKDIR /app/build
-RUN cmake .. && make
 
-# Указать порт, который будет использовать сервер
-EXPOSE 8080
+$env:VCPKG_ROOT = "C:\path\to\vcpkg"
+$env:PATH = "$env:VCPKG_ROOT;$env:PATH"
 
-# Команда для запуска приложения
-CMD ["./QtServerApp"]
+
+
+vcpkg install
+
+
+cmake --preset=default
+cmake --build build
+./build/QtServerApp
+
+
+# экпортировать переменные среды из .env
+
+
+rm -rf ./build/
+
+# https://learn.microsoft.com/ru-ru/vcpkg/get_started/get-started?pivots=shell-powershell

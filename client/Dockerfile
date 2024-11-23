@@ -11,8 +11,11 @@ RUN apt-get update && apt-get install -y \
     libqt5widgets5 \
     libqt5network5 \
     g++ \
-    && apt-get clean
+    libqt5gui5 && \
+    && apt-get clean \
+    rm -rf /var/lib/apt/lists/* 
 
+ENV QT_DEBUG_PLUGINS=1
 # Указание рабочей директории
 WORKDIR /app
 

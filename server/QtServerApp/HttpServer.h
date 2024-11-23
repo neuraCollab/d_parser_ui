@@ -2,9 +2,8 @@
 #define HTTPSERVER_H
 
 #include <QObject>
-#include "DatabaseManager.h"
-#include "SessionManager.h"
-#include "FileParser.h"
+#include <QTcpServer>
+#include <QTcpSocket>
 
 class HttpServer : public QObject {
     Q_OBJECT
@@ -13,12 +12,11 @@ public:
     void start();
 
 private slots:
-    void handleParsingRequest();
+    void handleNewConnection();
+    void handleReadyRead();
 
 private:
-    DatabaseManager dbManager;
-    SessionManager sessionManager;
-    FileParser fileParser;
+    QTcpServer *server;
 };
 
 #endif // HTTPSERVER_H

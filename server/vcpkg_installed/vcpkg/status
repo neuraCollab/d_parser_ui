@@ -1,0 +1,33 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-linux
+Multi-Arch: same
+Abi: b8e43b840b1ce7d8e8f0eb26a26f69058b2485cfb32178a074b91efc53e0654a
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 7d2867f925e9bd883a69397d654722c943e7440907ef08925485e373a152892c
+Status: install ok installed
+
+Package: fmt
+Version: 11.0.2
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 3c4cca86bb2e9071bbbd72ce855f7bef8c08cf2dfb4f51830ca6894d5568f61b
+Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
+Status: install ok installed
+
+Package: libenvpp
+Version: 1.4.1
+Depends: fmt, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 926514294e3325f0683439ae6c48ecf53969795cdc66d20f3087de600c67f269
+Description: A modern C++ library for type-safe environment variable parsing
+Status: install ok installed
+

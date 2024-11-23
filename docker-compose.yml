@@ -1,40 +1,52 @@
 version: '3.8'
 
 services:
-  client:
-    build: ./client
-    container_name: client_app
-    ports:
-      - "${CLIENT_PORT}:3000"
-    depends_on:
-      - server
+  db:
+    image: mysql:5.7
+    container_name: db
     environment:
-      - QT_VERSION_MAJOR=${QT_VERSION_MAJOR}
-
-  server:
-    build: ./server
-    container_name: server_app
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "${SERVER_PORT}:8080"
+      - "${DB_PORT}:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
     depends_on:
       - db
     environment:
-      - DB_HOST=${DB_HOST}
-      - DB_USER=${DB_USER}
-      - DB_PASS=${DB_PASS}
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "8081:80"
+
+  # client:
+  #   build: ./client
+  #   container_name: client_app
+  #   ports:
+  #     - "${CLIENT_PORT}:3000"
+  #   environment:
+  #     - QT_VERSION_MAJOR=${QT_VERSION_MAJOR}
+
+  # server:
+  #   build: ./server
+  #   container_name: server_app
+  #   ports:
+  #     - "${SERVER_PORT}:8080"
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - DB_HOST=${DB_HOST}
+  #     - DB_USER=${DB_USER}
+  #     - DB_PASS=${DB_PASS}
 
   # parser:
   #   build: ./parser
   #   container_name: parser_app
   #   depends_on:
   #     - server
-
-  db:
-    image: mysql:5.7
-    container_name: db
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "${DB_PORT}:3306"
