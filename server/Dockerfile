@@ -1,38 +1,55 @@
-apt-get update
-apt-get install curl zip unzip tar
-git clone https://github.com/microsoft/vcpkg.git
-cd vcpkg
- ./bootstrap-vcpkg.sh
-cd ..
-vcpkg install libenvpp
+# Базовый образ
+FROM ubuntu:20.04
 
-vcpkg integrate install
+ENV DEBIAN_FRONTEND=noninteractive 
+# Установить основные зависимости
+RUN apt-get update && apt-get install -y \
+    curl \
+    zip \
+    unzip \
+    tar \
+    git \
+    build-essential \
+    cmake \
+    libssl-dev \
+    qtbase5-dev \
+    qtchooser \
+    qt5-qmake \
+    pkg-config \
+    qttools5-dev-tools \
+    && apt-get clean
 
+# Установить vcpkg
+WORKDIR /app
+RUN git clone https://github.com/microsoft/vcpkg.git && \
+    cd vcpkg && \
+    ./bootstrap-vcpkg.sh
 
-mkdir build && cd build
-cmake -DCMAKE_TOOLCHAIN_FILE=/app/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+# Установить зависимости из vcpkg.json
+COPY ./QtServerApp/vcpkg.json /app/vcpkg.json
+RUN /app/vcpkg/vcpkg install 
 
-make
-./QtServerApp
+# Настроить переменные окружения для vcpkg
+ENV VCPKG_ROOT=/app/vcpkg
+ENV PATH="$VCPKG_ROOT:$PATH"
+ENV CMAKE_TOOLCHAIN_FILE=/app/vcpkg/scripts/buildsystems/vcpkg.cmake
 
+# Копировать проект в контейнер
+WORKDIR /app/server/QtServerApp
+COPY . .
 
-$env:VCPKG_ROOT = "C:\path\to\vcpkg"
-$env:PATH = "$env:VCPKG_ROOT;$env:PATH"
+RUN ls -la && sleep 1
+# Настроить CMake, используя CMakePresets.json
+RUN cmake --presets
 
+# Собрать проект
+RUN cmake --build build --config Release
 
+# Удалить временные файлы сборки, чтобы уменьшить размер образа
+RUN rm -rf ./build
 
-vcpkg install
+# Экспортировать переменные среды из .env, если требуется
+# ENV ENV_VARIABLE=value
 
-
-cmake --preset=default
-cmake --build build
-./build/QtServerApp
-
-
-# экпортировать переменные среды из .env
-
-
-rm -rf ./build/
-
-# https://learn.microsoft.com/ru-ru/vcpkg/get_started/get-started?pivots=shell-powershell
-# https://github.com/carlonluca/docker-qt
+# Указать команду для запуска сервера
+CMD ["./build/QtServerApp"]
