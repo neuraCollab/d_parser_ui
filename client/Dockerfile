@@ -1,6 +1,10 @@
 # Базовый образ для сборки Qt-приложений
 FROM ubuntu:22.04
 
+# Установка переменной окружения для предотвращения интерактивных запросов
+ENV DEBIAN_FRONTEND=noninteractive 
+ENV WAYLAND_DISPLAY=wayland-0
+
 # Установка необходимых зависимостей
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -11,9 +15,7 @@ RUN apt-get update && apt-get install -y \
     libqt5widgets5 \
     libqt5network5 \
     g++ \
-    libqt5gui5 && \
-    && apt-get clean \
-    rm -rf /var/lib/apt/lists/* 
+    libqt5gui5 && apt-get clean && rm -rf /var/lib/apt/lists/* 
 
 ENV QT_DEBUG_PLUGINS=1
 # Указание рабочей директории
@@ -23,11 +25,10 @@ WORKDIR /app
 COPY . /app
 
 # Создание директории для сборки
-RUN mkdir build
 
 # Перемещение в директорию сборки и выполнение CMake + Make
-WORKDIR /app/build
-RUN cmake .. && make
+WORKDIR /app/DataParserApp
+RUN rm -rf build && mkdir build && cd build && cmake .. && make
 
 # Указать порт для клиента (если необходимо)
 EXPOSE 3000
