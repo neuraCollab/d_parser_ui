@@ -36,11 +36,11 @@ ENV CMAKE_TOOLCHAIN_FILE=/app/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 # Копировать проект в контейнер
 WORKDIR /app/server/QtServerApp
-COPY . .
+COPY ./QtServerApp/CMakeUserPresets.json /app/server/QtServerApp/CMakeUserPresets.json
+# RUN ls -la /app/server/QtServerApp/QtServerApp && sleep 10
 
-RUN ls -la && sleep 1
 # Настроить CMake, используя CMakePresets.json
-RUN cmake --presets
+RUN cd /app/server/QtServerApp/ && cmake --presets "default"
 
 # Собрать проект
 RUN cmake --build build --config Release
