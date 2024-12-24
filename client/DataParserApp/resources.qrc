@@ -1,1 +1,8 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/">
+        <file>images/hero_bg.jpg</file>
+        <file>images/free_plan.png</file>
+        <file>images/premium_plan.png</file>
+        <file>images/standard_plan.png</file>
+    </qresource>
+</RCC>

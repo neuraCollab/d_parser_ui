@@ -1,16 +1,19 @@
 #include "mainwindow.h"
 #include "login.h"
-#include <QStackedWidget>
-#include <QVBoxLayout>
-#include <QMessageBox>
-#include <QPalette>
-#include <QPixmap>
-#include <QLabel>
 #include "homepage.h"
 #include "profile.h"
 #include "register.h"
 #include "aboutpage.h"
 #include "authmanager.h"
+
+#include <QStackedWidget>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QMessageBox>
+#include <QPalette>
+#include <QScreen>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Получаем Singleton экземпляр AuthManager
@@ -43,6 +46,32 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     palette.setColor(QPalette::Window, QColor(255, 255, 255)); // Белый фон
     setPalette(palette);
 
+    // Футер для всех страниц
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    QHBoxLayout *footerLayout = new QHBoxLayout;
+
+    QLabel *footerLabel = new QLabel("© 2024 Data Parser Application. Все права защищены.", this);
+    footerLabel->setStyleSheet("color: gray; font-size: 12px;");
+
+    QPushButton *contactButton = new QPushButton("Связаться с нами", this);
+    contactButton->setStyleSheet("background-color: white; color: black; border: 1px solid gray; font-size: 12px;");
+
+    connect(contactButton, &QPushButton::clicked, this, []() {
+        QMessageBox::information(nullptr, "Контакты", "Почта: support@dataparser.com\nТелефон: +7 (999) 123-45-67");
+    });
+
+    footerLayout->addStretch();
+    footerLayout->addWidget(footerLabel);
+    footerLayout->addWidget(contactButton);
+    footerLayout->addStretch();
+
+    mainLayout->addWidget(stackedWidget);
+    mainLayout->addLayout(footerLayout);
+
+    QWidget *centralWidget = new QWidget(this);
+    centralWidget->setLayout(mainLayout);
+    setCentralWidget(centralWidget);
+
     // Соединяем сигналы и слоты для обработки входа
     connect(&authManager, &AuthManager::loginSuccess, this, [stackedWidget](const QString &role) {
         QMessageBox::information(nullptr, "Успешный вход", "Авторизация прошла успешно. Роль: " + role);
@@ -57,6 +86,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         QMessageBox::information(nullptr, "Выход", "Вы успешно вышли из системы.");
         stackedWidget->setCurrentIndex(0); // Возврат на главную страницу
     });
+
+    // Устанавливаем окно на весь экран
+    showMaximized();
 }
 
 MainWindow::~MainWindow() {}

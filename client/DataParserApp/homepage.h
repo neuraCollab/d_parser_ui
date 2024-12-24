@@ -6,12 +6,17 @@
 
 class QPushButton;
 class QLabel;
+class QVBoxLayout;
+class QHBoxLayout;
 
 class HomePage : public QWidget {
     Q_OBJECT
 
 public:
     explicit HomePage(QWidget *parent = nullptr);
+
+protected:
+    void resizeEvent(QResizeEvent *event) override; // Обрабатываем изменение размера окна
 
 private slots:
     void onLoginButtonClicked();
@@ -21,6 +26,11 @@ private slots:
 
 private:
     AuthManager *authManager;
+
+    // Элементы интерфейса
+    QVBoxLayout *mainLayout;   // Основной макет
+    QLabel *heroImage;         // Лейбл для изображения Hero
+    QHBoxLayout *pricingLayout; // Макет для отображения планов
 
     QPushButton *loginButton;
     QPushButton *registerButton;
