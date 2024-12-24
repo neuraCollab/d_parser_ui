@@ -13,7 +13,8 @@
 #include "authmanager.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-    authManager = new AuthManager(this);
+    // Получаем Singleton экземпляр AuthManager
+    AuthManager &authManager = AuthManager::instance();
 
     // Создание QStackedWidget
     QStackedWidget *stackedWidget = new QStackedWidget(this);
@@ -27,29 +28,34 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     AboutPage *mainPage = new AboutPage(stackedWidget);
 
     // Добавляем страницы в QStackedWidget
-    stackedWidget->addWidget(homePage);
-    stackedWidget->addWidget(loginPage);
-    stackedWidget->addWidget(registerPage);
-    stackedWidget->addWidget(profilePage);
-    stackedWidget->addWidget(mainPage);
+    stackedWidget->addWidget(homePage);      // Индекс 0
+    stackedWidget->addWidget(loginPage);     // Индекс 1
+    stackedWidget->addWidget(registerPage);  // Индекс 2
+    stackedWidget->addWidget(profilePage);   // Индекс 3
+    stackedWidget->addWidget(mainPage);      // Индекс 4
 
     // Устанавливаем минимальный размер окна и заголовок
     setMinimumSize(800, 600);
     setWindowTitle("Data Parser Application");
 
-    // Настроим палитру
+    // Настраиваем палитру
     QPalette palette;
     palette.setColor(QPalette::Window, QColor(255, 255, 255)); // Белый фон
     setPalette(palette);
 
     // Соединяем сигналы и слоты для обработки входа
-    connect(authManager, &AuthManager::loginSuccess, this, [stackedWidget]() {
-        QMessageBox::information(nullptr, "Успешный вход", "Авторизация прошла успешно.");
+    connect(&authManager, &AuthManager::loginSuccess, this, [stackedWidget](const QString &role) {
+        QMessageBox::information(nullptr, "Успешный вход", "Авторизация прошла успешно. Роль: " + role);
         stackedWidget->setCurrentIndex(3); // Переключаемся на страницу профиля
     });
 
-    connect(authManager, &AuthManager::loginFailed, this, [](const QString &error) {
+    connect(&authManager, &AuthManager::loginFailed, this, [](const QString &error) {
         QMessageBox::warning(nullptr, "Ошибка входа", error);
+    });
+
+    connect(&authManager, &AuthManager::loggedOut, this, [stackedWidget]() {
+        QMessageBox::information(nullptr, "Выход", "Вы успешно вышли из системы.");
+        stackedWidget->setCurrentIndex(0); // Возврат на главную страницу
     });
 }
 

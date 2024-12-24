@@ -2,38 +2,48 @@
 #define AUTHMANAGER_H
 
 #include <QObject>
-#include <QString>
 #include <QNetworkAccessManager>
-#include <QNetworkReply>
+#include <QString>
 
 class AuthManager : public QObject {
     Q_OBJECT
 
 public:
-    explicit AuthManager(QObject *parent = nullptr);
+    // Singleton: метод для доступа к единственному экземпляру класса
+    static AuthManager &instance();
 
+    // Удаляем копирование и перемещение, чтобы гарантировать уникальность экземпляра
+    AuthManager(const AuthManager &) = delete;
+    AuthManager &operator=(const AuthManager &) = delete;
+
+    // Методы авторизации
     void login(const QString &username, const QString &password);
-
+    void logout();
+    QString getToken() const;
     static void saveToken(const QString &token);
     static QString loadToken();
-    static bool isUserAuthenticated();
-    static void clearToken();
-
-    QString getToken() const;  // Объявление метода как const
+    bool isUserAuthenticated() const;
 
 signals:
-    void loginSuccess();     // Сигнал успешного логина
-    void loginFailed(const QString &error); // Сигнал неудачного логина
-
-private slots:
-    void onLoginReply();  // Слот для обработки ответа на запрос авторизации
+    void loginSuccess(const QString &role); // Передаём роль пользователя
+    void loginFailed(const QString &error);
+    void loggedOut();
 
 private:
-    void setToken(const QString &token);
+    // Приватный конструктор для реализации Singleton
+    explicit AuthManager(QObject *parent = nullptr);
 
-    QString jwtToken;  // Токен
-    bool isAuthenticated;  // Статус авторизации
-    QNetworkAccessManager *networkManager;  // Менеджер для сетевых запросов
+    // Методы для работы с токенами
+    void setToken(const QString &token);
+    void clearToken();
+
+    // Поля для хранения данных
+    QString jwtToken;                        // Хранит токен авторизации
+    bool isAuthenticated;                    // Флаг авторизации
+    QNetworkAccessManager *networkManager;   // Для выполнения сетевых запросов
+
+private slots:
+    void onLoginReply();
 };
 
 #endif // AUTHMANAGER_H

@@ -1,5 +1,5 @@
-C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/EWIEGA46WW/moc_aboutpage.cpp: C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.h \
-  C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h \
+C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/EWIEGA46WW/moc_aboutpage.cpp: C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/aboutpage.h \
+  C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -99,6 +99,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/c++/14.2.0/bits/utility.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/msys64/mingw64/include/c++/14.2.0/cassert \
   C:/msys64/mingw64/include/c++/14.2.0/cctype \
   C:/msys64/mingw64/include/c++/14.2.0/cerrno \
   C:/msys64/mingw64/include/c++/14.2.0/chrono \
@@ -188,6 +189,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/pthread_unistd.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20functional.h \
+  C:/msys64/mingw64/include/qt6/QtCore/q20iterator.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20memory.h \
   C:/msys64/mingw64/include/qt6/QtCore/q20type_traits.h \
   C:/msys64/mingw64/include/qt6/QtCore/q23utility.h \
@@ -265,6 +267,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qsharedpointer.h \
   C:/msys64/mingw64/include/qt6/QtCore/qsharedpointer_impl.h \
   C:/msys64/mingw64/include/qt6/QtCore/qsize.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qspan.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstring.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstringalgorithms.h \
   C:/msys64/mingw64/include/qt6/QtCore/qstringbuilder.h \
@@ -285,6 +288,7 @@ C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w6
   C:/msys64/mingw64/include/qt6/QtCore/qtconfigmacros.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtcore-config.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtcoreexports.h \
+  C:/msys64/mingw64/include/qt6/QtCore/qtdeprecationdefinitions.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtdeprecationmarkers.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtenvironmentvariables.h \
   C:/msys64/mingw64/include/qt6/QtCore/qtextstream.h \

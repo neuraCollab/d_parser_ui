@@ -2,6 +2,7 @@
 #define HOMEPAGE_H
 
 #include <QWidget>
+#include "authmanager.h"
 
 class QPushButton;
 class QLabel;
@@ -19,6 +20,8 @@ private slots:
     void onAboutButtonClicked(); // Слот для кнопки "О нас"
 
 private:
+    AuthManager *authManager;
+
     QPushButton *loginButton;
     QPushButton *registerButton;
     QPushButton *orderButton;

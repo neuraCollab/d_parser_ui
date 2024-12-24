@@ -5,8 +5,16 @@
 #include <QVBoxLayout>
 #include <QMessageBox>
 #include <QRegularExpression>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 Register::Register(QWidget *parent) : QWidget(parent) {
+    // Инициализация QNetworkAccessManager
+    networkManager = new QNetworkAccessManager(this);
+
     // Основная компоновка страницы
     QVBoxLayout *layout = new QVBoxLayout(this);
 
@@ -15,7 +23,7 @@ Register::Register(QWidget *parent) : QWidget(parent) {
 
     // Создаем кнопку "Назад на главную"
     QPushButton *backToHomeButton = new QPushButton("Назад на главную", this);
-    backToHomeButton->setStyleSheet("background-color: white; color: black;"); // Устанавливаем стиль кнопки
+    backToHomeButton->setStyleSheet("background-color: white; color: black;");
 
     // Подключаем слот для обработки нажатия
     connect(backToHomeButton, &QPushButton::clicked, this, &Register::onBackToHomeButtonClicked);
@@ -78,9 +86,41 @@ void Register::onRegisterButtonClicked() {
         return;
     }
 
-    // Здесь должна быть логика добавления пользователя в базу данных
+    // Отправка запроса на сервер
+    sendRegisterRequest(name, email, password);
+}
 
-    QMessageBox::information(this, "Успех", "Регистрация прошла успешно!");
+void Register::sendRegisterRequest(const QString &name, const QString &email, const QString &password) {
+    QUrl url("http://localhost:8080/register"); // Адрес сервера
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    // Подготовка JSON-данных для отправки
+    QJsonObject json;
+    json["username"] = name;
+    json["password"] = password;
+    json["role"] = "user"; // Роль задаётся по умолчанию
+
+    QJsonDocument jsonDoc(json);
+
+    // Подключаем обработчик ответа
+    connect(networkManager, &QNetworkAccessManager::finished, this, &Register::onRegisterFinished);
+
+    // Отправляем запрос POST
+    networkManager->post(request, jsonDoc.toJson());
+}
+
+void Register::onRegisterFinished(QNetworkReply *reply) {
+    if (reply->error() == QNetworkReply::NoError) {
+        // Обработка успешного ответа
+        QString response = reply->readAll();
+        QMessageBox::information(this, "Успех", response);
+    } else {
+        // Обработка ошибки
+        QMessageBox::warning(this, "Ошибка", QString("Ошибка регистрации: %1").arg(reply->errorString()));
+    }
+
+    reply->deleteLater();
 }
 
 // Слот для кнопки возврата на главную страницу

@@ -1,4 +1,5 @@
 #include "homepage.h"
+#include "authmanager.h"
 #include <QStackedWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -9,7 +10,6 @@
 #include <QGradient>
 #include <QLinearGradient>
 #include <QMessageBox>
-#include "authmanager.h"
 
 HomePage::HomePage(QWidget *parent) : QWidget(parent) {
     // Устанавливаем белый фон
@@ -85,7 +85,8 @@ void HomePage::onRegisterButtonClicked() {
 }
 
 void HomePage::onOrderButtonClicked() {
-    if (AuthManager::isUserAuthenticated()) {
+    // Проверяем, авторизован ли пользователь
+    if (AuthManager::instance().isUserAuthenticated()) {
         QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());
         if (stackedWidget) {
             stackedWidget->setCurrentIndex(3); // Переход в личный кабинет
@@ -94,7 +95,6 @@ void HomePage::onOrderButtonClicked() {
         QMessageBox::warning(this, "Ошибка", "Необходимо авторизоваться.");
     }
 }
-
 
 void HomePage::onAboutButtonClicked() {
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget*>(parent());

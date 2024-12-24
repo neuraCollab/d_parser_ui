@@ -1,43 +1,37 @@
-# Минимальная версия CMake
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.19)
+project(server LANGUAGES CXX)
 
-# Имя проекта
-project(QtServerApp LANGUAGES CXX)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core  Sql LinguistTools Network HttpServer)
 
-# Указать стандарт C++
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+qt_standard_project_setup()
 
-# Указать путь к заголовочным файлам
-include_directories(/app/vcpkg/installed/x64-linux/include)
-
-# Find fmt and libenvpp
-find_package(fmt CONFIG REQUIRED)
-find_package(libenvpp CONFIG REQUIRED)
-
-# Link the libraries to your target
-# Найти пакеты Qt 6, envpp и fmt
-find_package(Qt6 REQUIRED COMPONENTS Core Network Sql)
-
-
-# Указать исходные файлы проекта
-set(SOURCES
+qt_add_executable(server
     main.cpp
-    DatabaseManager.cpp
-    SessionManager.cpp
-    FileParser.cpp
-    # HttpServer.cpp
+    server.h server.cpp
+    database.h database.cpp
 )
 
-set(HEADERS
-    DatabaseManager.h
-    SessionManager.h
-    FileParser.h
-    # HttpServer.h
+target_link_libraries(server
+    PRIVATE
+        Qt6::Core
+        Qt::Sql
+        Qt6::Network
+        Qt6::HttpServer
+        OpenSSL::SSL
+        OpenSSL::Crypto
 )
 
-# Создать исполняемый файл
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+include(GNUInstallDirs)
 
-# Подключить библиотеки к проекту
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core Qt6::Network Qt6::Sql fmt::fmt libenvpp::libenvpp) 
+install(TARGETS server
+    BUNDLE  DESTINATION .
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+qt_generate_deploy_app_script(
+    TARGET server
+    OUTPUT_SCRIPT deploy_script
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${deploy_script})
