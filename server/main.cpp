@@ -1,36 +1,34 @@
 #include <QCoreApplication>
-#include "DatabaseManager.h"
-#include "SessionManager.h"
+#include <QLocale>
+#include <QTranslator>
+#include "server.h"
+#include <QDir> // Добавляем этот заголовок
+#include "database.h"
 
 int main(int argc, char *argv[]) {
     QCoreApplication a(argc, argv);
 
-    DatabaseManager dbManager;
-    if (!dbManager.open()) {
-        return -1;
+    QTranslator translator;
+    const QStringList uiLanguages = QLocale::system().uiLanguages();
+    for (const QString &locale : uiLanguages) {
+        const QString baseName = "server_" + QLocale(locale).name();
+        if (translator.load(":/i18n/" + baseName)) {
+            a.installTranslator(&translator);
+            break;
+        }
     }
 
-    SessionManager sessionManager;
-    QString token = sessionManager.generateToken("testuser");
+    // Инициализация базы данных
+    Database();
 
-    // Тест создания сессии
-    int userId = 1; // Идентификатор пользователя для теста
-    QDateTime expiresAt = QDateTime::currentDateTime().addDays(1);
-    if (sessionManager.createSession(userId, token, expiresAt)) {
-        qDebug() << "Сессия создана. Токен:" << token;
+    // Создаем директорию для хранения файлов
+    QDir dir("uploads");
+    if (!dir.exists()) {
+        dir.mkpath(".");
     }
 
-    // Тест получения сессии
-    QVariantMap sessionInfo = sessionManager.getSession(token);
-    if (!sessionInfo.isEmpty()) {
-        qDebug() << "Сессия найдена:" << sessionInfo;
-    }
+    // Запуск сервера
+    Server server;
 
-    // Тест удаления сессии
-    if (sessionManager.deleteSession(token)) {
-        qDebug() << "Сессия успешно удалена.";
-    }
-
-    dbManager.close();
     return a.exec();
 }

@@ -9,6 +9,9 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QUrlQuery>
+#include <QJsonDocument>
+#include <QJsonObject>
+
 
 Login::Login(QWidget *parent) : QWidget(parent), authManager(nullptr) {
     // Инициализация QNetworkAccessManager
@@ -73,38 +76,54 @@ void Login::onLoginButtonClicked() {
     QString username = usernameEdit->text();
     QString password = passwordEdit->text();
 
-    // Проверяем, есть ли authManager и вызываем метод логина
-    if (authManager) {
-        authManager->login(username, password);
-    } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось выполнить вход. authManager не инициализирован.");
+    if (username.isEmpty() || password.isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Имя пользователя и пароль не должны быть пустыми.");
+        return;
     }
+
+    sendLoginRequest(username, password);
 }
 
 void Login::sendLoginRequest(const QString &username, const QString &password) {
-    QUrl url("https://example.com/api/login"); // Адрес сервера
+    QUrl url("http://localhost:8080/login"); // Адрес вашего сервера
     QNetworkRequest request(url);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-    QUrlQuery params;
-    params.addQueryItem("username", username);
-    params.addQueryItem("password", password);
+    // Подготовка JSON-данных для отправки
+    QJsonObject json;
+    json["username"] = username;
+    json["password"] = password;
+
+    QJsonDocument jsonDoc(json);
 
     // Подключаем слот для обработки ответа
     connect(networkManager, &QNetworkAccessManager::finished, this, &Login::onLoginFinished);
 
     // Отправляем запрос POST
-    networkManager->post(request, params.toString(QUrl::FullyEncoded).toUtf8());
+    networkManager->post(request, jsonDoc.toJson());
 }
 
 void Login::onLoginFinished(QNetworkReply *reply) {
     if (reply->error() == QNetworkReply::NoError) {
-        QString token = reply->readAll(); // Обработка успешного ответа
-        AuthManager::saveToken(token);
-        QMessageBox::information(this, "Успех", "Авторизация успешна!");
+        // Обработка успешного ответа
+        QByteArray response = reply->readAll();
+        QJsonDocument jsonResponse = QJsonDocument::fromJson(response);
+        QJsonObject responseObject = jsonResponse.object();
+
+        if (responseObject.contains("token")) {
+            QString token = responseObject["token"].toString();
+            QString role = responseObject["role"].toString();
+
+            AuthManager::saveToken(token); // Сохранение токена (реализация в AuthManager)
+            QMessageBox::information(this, "Успех", QString("Авторизация успешна! Ваша роль: %1").arg(role));
+        } else {
+            QMessageBox::warning(this, "Ошибка", "Ответ сервера не содержит токена.");
+        }
     } else {
-        QMessageBox::warning(this, "Ошибка", "Ошибка авторизации.");
+        // Обработка ошибки
+        QMessageBox::warning(this, "Ошибка", QString("Ошибка авторизации: %1").arg(reply->errorString()));
     }
+
     reply->deleteLater();
 }
 

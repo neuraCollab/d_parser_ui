@@ -1,18 +1,18 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp",
+	"BUILD_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp",
 	"CMAKE_EXECUTABLE" : "C:/msys64/mingw64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/annap/d_parser_ui/client/DataParserApp/CMakeLists.txt",
-		"C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/.qtc/package-manager/auto-setup.cmake",
-		"C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeSystem.cmake",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/CMakeLists.txt",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeSystem.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeCXXCompiler.cmake",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -25,18 +25,27 @@
 		"C:/msys64/mingw64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake",
-		"C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeRCCompiler.cmake",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeRCCompiler.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeRCInformation.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Linker/GNU-CXX.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Linker/GNU.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/GNU.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6Config.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6ConfigExtras.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtInstallPaths.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6Targets.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtFeature.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CheckCXXCompilerFlag.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/Internal/CheckCompilerFlag.cmake",
@@ -53,7 +62,10 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicGitHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTestHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicToolHelpers.cmake",
@@ -71,8 +83,10 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6Config.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6ConfigExtras.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtInstallPaths.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6Targets.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtFeature.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CheckCXXCompilerFlag.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtFeatureCommon.cmake",
@@ -83,7 +97,10 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicGitHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTestHelpers.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6/QtPublicToolHelpers.cmake",
@@ -146,16 +163,15 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointMinGW32Target.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6Core/QtInstallPaths.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -178,7 +194,6 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
@@ -230,10 +245,10 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginAdditionalTargetInfo.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiVersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake",
@@ -241,6 +256,7 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake",
+		"C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
@@ -249,7 +265,6 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginConfig.cmake",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
@@ -276,60 +291,68 @@
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
-		"C:/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake"
+		"C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
+		"C:/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake",
+		"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp",
+	"CMAKE_SOURCE_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/deps",
+	"DEP_FILE" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "DataParserApp_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/aboutpage.h",
 			"MU",
 			"EWIEGA46WW/moc_aboutpage.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/authmanager.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/authmanager.h",
 			"MU",
 			"EWIEGA46WW/moc_authmanager.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/basepage.h",
+			"MU",
+			"EWIEGA46WW/moc_basepage.cpp",
+			null
+		],
+		[
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/homepage.h",
 			"MU",
 			"EWIEGA46WW/moc_homepage.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/login.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/login.h",
 			"MU",
 			"EWIEGA46WW/moc_login.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/profile.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/profile.h",
 			"MU",
 			"EWIEGA46WW/moc_profile.cpp",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/register.h",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/register.h",
 			"MU",
 			"EWIEGA46WW/moc_register.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -389,56 +412,61 @@
 		"-c",
 		"C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/DataParserApp_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/DataParserApp_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/msys64/mingw64/share/qt6/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/msys64/mingw64/share/qt6/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
-	"QT_VERSION_MINOR" : 7,
-	"SETTINGS_FILE" : "C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/DataParserApp_autogen.dir/AutogenUsed.txt",
+	"QT_VERSION_MINOR" : 8,
+	"SETTINGS_FILE" : "C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/DataParserApp_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/aboutpage.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/authmanager.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/authmanager.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/basepage.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/login.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/homepage.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/main.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/login.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/profile.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/mainwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/annap/d_parser_ui/client/DataParserApp/register.cpp",
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/profile.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/register.cpp",
 			"MU",
 			null
 		]
@@ -447,6 +475,6 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],
 	"UIC_UI_FILES" : [],
-	"USE_BETTER_GRAPH" : false,
+	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0
 }

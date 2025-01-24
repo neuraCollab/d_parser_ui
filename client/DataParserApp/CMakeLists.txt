@@ -32,6 +32,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(DataParserApp
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        resources.qrc
+        basepage.h basepage.cpp
     )
 else()
     if(ANDROID)

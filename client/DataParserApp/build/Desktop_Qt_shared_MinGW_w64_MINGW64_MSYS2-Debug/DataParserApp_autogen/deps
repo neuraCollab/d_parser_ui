@@ -1,25 +1,28 @@
 DataParserApp_autogen/timestamp: \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/CMakeLists.txt \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/aboutpage.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/authmanager.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/authmanager.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/.qtc/package-manager/auto-setup.cmake \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeCXXCompiler.cmake \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeRCCompiler.cmake \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.30.3/CMakeSystem.cmake \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/homepage.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/login.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/login.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/main.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/mainwindow.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/profile.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/profile.h \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/register.cpp \
-	C:/Users/annap/d_parser_ui/client/DataParserApp/register.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/CMakeLists.txt \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/aboutpage.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/aboutpage.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/authmanager.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/authmanager.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/basepage.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/basepage.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeCXXCompiler.cmake \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeRCCompiler.cmake \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/3.31.2/CMakeSystem.cmake \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/build/Desktop_Qt_shared_MinGW_w64_MINGW64_MSYS2-Debug/DataParserApp_autogen/moc_predefs.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/homepage.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/homepage.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/login.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/login.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/main.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/mainwindow.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/mainwindow.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/profile.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/profile.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/register.cpp \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/register.h \
+	C:/Users/bubuntu/Documents/d_parser_ui/client/DataParserApp/resources.qrc \
 	C:/msys64/mingw64/include/_mingw.h \
 	C:/msys64/mingw64/include/_mingw_mac.h \
 	C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -119,6 +122,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/c++/14.2.0/bits/utility.h \
 	C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
 	C:/msys64/mingw64/include/c++/14.2.0/bits/version.h \
+	C:/msys64/mingw64/include/c++/14.2.0/cassert \
 	C:/msys64/mingw64/include/c++/14.2.0/cctype \
 	C:/msys64/mingw64/include/c++/14.2.0/cerrno \
 	C:/msys64/mingw64/include/c++/14.2.0/chrono \
@@ -214,12 +218,15 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/qt6/QtCore/QObject \
 	C:/msys64/mingw64/include/qt6/QtCore/QSharedDataPointer \
 	C:/msys64/mingw64/include/qt6/QtCore/QString \
+	C:/msys64/mingw64/include/qt6/QtCore/QStringList \
 	C:/msys64/mingw64/include/qt6/QtCore/QUrl \
 	C:/msys64/mingw64/include/qt6/QtCore/QVariant \
 	C:/msys64/mingw64/include/qt6/QtCore/q20functional.h \
+	C:/msys64/mingw64/include/qt6/QtCore/q20iterator.h \
 	C:/msys64/mingw64/include/qt6/QtCore/q20memory.h \
 	C:/msys64/mingw64/include/qt6/QtCore/q20type_traits.h \
 	C:/msys64/mingw64/include/qt6/QtCore/q23utility.h \
+	C:/msys64/mingw64/include/qt6/QtCore/q26numeric.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qalgorithms.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qanystringview.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qarraydata.h \
@@ -299,6 +306,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/qt6/QtCore/qsharedpointer.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qsharedpointer_impl.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qsize.h \
+	C:/msys64/mingw64/include/qt6/QtCore/qspan.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qstring.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qstringalgorithms.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qstringbuilder.h \
@@ -319,6 +327,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/qt6/QtCore/qtconfigmacros.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qtcore-config.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qtcoreexports.h \
+	C:/msys64/mingw64/include/qt6/QtCore/qtdeprecationdefinitions.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qtdeprecationmarkers.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qtenvironmentvariables.h \
 	C:/msys64/mingw64/include/qt6/QtCore/qtextstream.h \
@@ -371,6 +380,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qabstractsocket.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qhostaddress.h \
+	C:/msys64/mingw64/include/qt6/QtNetwork/qhttpheaders.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkaccessmanager.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkreply.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qnetworkrequest.h \
@@ -384,10 +394,22 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qtnetwork-config.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qtnetworkexports.h \
 	C:/msys64/mingw64/include/qt6/QtNetwork/qtnetworkglobal.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/QHBoxLayout \
 	C:/msys64/mingw64/include/qt6/QtWidgets/QMainWindow \
+	C:/msys64/mingw64/include/qt6/QtWidgets/QPushButton \
+	C:/msys64/mingw64/include/qt6/QtWidgets/QStackedWidget \
+	C:/msys64/mingw64/include/qt6/QtWidgets/QVBoxLayout \
 	C:/msys64/mingw64/include/qt6/QtWidgets/QWidget \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qabstractbutton.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qboxlayout.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qframe.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qgridlayout.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qlayout.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qlayoutitem.h \
 	C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qpushbutton.h \
 	C:/msys64/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
+	C:/msys64/mingw64/include/qt6/QtWidgets/qstackedwidget.h \
 	C:/msys64/mingw64/include/qt6/QtWidgets/qtabwidget.h \
 	C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
 	C:/msys64/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \
@@ -420,9 +442,10 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/Qt6Dependencies.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/Qt6Targets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtFeature.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtFeatureCommon.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6/QtInstallPaths.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake \
@@ -430,7 +453,10 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicGitHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicSbomHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicTestHelpers.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6/QtPublicToolHelpers.cmake \
@@ -444,8 +470,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6Core/QtInstallPaths.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake \
@@ -461,7 +486,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfigVersionImpl.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets-relwithdebinfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessTargets.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake \
@@ -470,7 +495,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6GuiVersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake \
@@ -527,7 +552,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginAdditionalTargetInfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginConfig.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets-relwithdebinfo.cmake \
@@ -561,7 +586,7 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake \
-	C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake \
+	C:/msys64/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake \
 	C:/msys64/mingw64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake \
@@ -594,9 +619,16 @@ DataParserApp_autogen/timestamp: \
 	C:/msys64/mingw64/share/cmake/Modules/FindThreads.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/FindVulkan.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/GNUInstallDirs.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Linker/GNU-CXX.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Linker/GNU.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/GNU.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake \
+	C:/msys64/mingw64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake \
 	C:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake \
