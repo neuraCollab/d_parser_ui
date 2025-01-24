@@ -16,6 +16,7 @@ public:
     explicit Profile(QWidget *parent = nullptr);
 
 private slots:
+    void onLogoutButtonClicked();
     void onSubmitButtonClicked(); // Слот для обработки отправки заказа
     void onBackToHomeButtonClicked(); // Слот для обработки возврата на главную страницу
     void onSelectFiles(); // Слот для выбора файлов
@@ -31,5 +32,6 @@ private:
 
     void sendUploadRequest(const QString &description, const QStringList &files); // Метод для отправки данных и файлов на сервер
 };
+
 
 #endif // PROFILE_H

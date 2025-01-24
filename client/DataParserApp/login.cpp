@@ -96,11 +96,15 @@ void Login::sendLoginRequest(const QString &username, const QString &password) {
 
     QJsonDocument jsonDoc(json);
 
+
+
+
     // Подключаем слот для обработки ответа
     connect(networkManager, &QNetworkAccessManager::finished, this, &Login::onLoginFinished);
 
     // Отправляем запрос POST
     networkManager->post(request, jsonDoc.toJson());
+
 }
 
 void Login::onLoginFinished(QNetworkReply *reply) {
@@ -114,11 +118,16 @@ void Login::onLoginFinished(QNetworkReply *reply) {
             QString token = responseObject["token"].toString();
             QString role = responseObject["role"].toString();
 
+             qDebug() << "Loaded Token:" << token;
+
             AuthManager::saveToken(token); // Сохранение токена (реализация в AuthManager)
             QMessageBox::information(this, "Успех", QString("Авторизация успешна! Ваша роль: %1").arg(role));
         } else {
             QMessageBox::warning(this, "Ошибка", "Ответ сервера не содержит токена.");
         }
+
+        qDebug() << "Saved Token:" << AuthManager::instance().getToken();
+
     } else {
         // Обработка ошибки
         QMessageBox::warning(this, "Ошибка", QString("Ошибка авторизации: %1").arg(reply->errorString()));

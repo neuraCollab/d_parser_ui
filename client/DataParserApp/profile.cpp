@@ -1,4 +1,5 @@
 #include "profile.h"
+#include "authmanager.h"
 #include <QStackedWidget>
 #include <QTextEdit>
 #include <QPushButton>
@@ -17,23 +18,24 @@ Profile::Profile(QWidget *parent)
     // Основная компоновка страницы
     QVBoxLayout *layout = new QVBoxLayout(this);
 
-    // Горизонтальная компоновка для размещения кнопки слева
+    // Горизонтальная компоновка для размещения кнопок
     QHBoxLayout *topLayout = new QHBoxLayout;
 
     // Создаем кнопку "Назад на главную"
     backToHomeButton = new QPushButton("Назад на главную", this);
     backToHomeButton->setStyleSheet("background-color: white; color: black;");
-
-    // Подключаем слот для обработки нажатия
     connect(backToHomeButton, &QPushButton::clicked, this, &Profile::onBackToHomeButtonClicked);
 
-    // Добавляем кнопку в левую часть горизонтальной компоновки
+    // Добавляем кнопку "Выход"
+    QPushButton *logoutButton = new QPushButton("Выйти", this);
+    logoutButton->setStyleSheet("background-color: red; color: white;");
+    connect(logoutButton, &QPushButton::clicked, this, &Profile::onLogoutButtonClicked);
+
+    // Добавляем кнопки в верхнюю панель
     topLayout->addWidget(backToHomeButton, 0, Qt::AlignLeft);
-
-    // Добавляем отступ в правую часть горизонтальной компоновки, чтобы кнопка оставалась слева
     topLayout->addStretch();
+    topLayout->addWidget(logoutButton, 0, Qt::AlignRight);
 
-    // Добавляем горизонтальную компоновку в основную вертикальную
     layout->addLayout(topLayout);
 
     // Поле для ввода описания заказа
@@ -131,5 +133,14 @@ void Profile::onBackToHomeButtonClicked() {
     QStackedWidget *stackedWidget = qobject_cast<QStackedWidget *>(parent());
     if (stackedWidget) {
         stackedWidget->setCurrentIndex(0); // Переключаемся на главную страницу
+    }
+}
+
+// Слот для кнопки выхода
+void Profile::onLogoutButtonClicked() {
+    AuthManager::instance().logout(); // Вызываем logout из AuthManager
+    QStackedWidget *stackedWidget = qobject_cast<QStackedWidget *>(parent());
+    if (stackedWidget) {
+        stackedWidget->setCurrentIndex(0); // Переключаемся на главную страницу после выхода
     }
 }

@@ -20,7 +20,7 @@ Server::Server(QObject *parent) : QObject(parent), server(new QHttpServer(this))
             return QHttpServerResponse(QByteArray("Only POST method allowed"), QHttpServerResponse::StatusCode::MethodNotAllowed);
         }
 
-        QString filePath = "uploads/uploaded_file.txt"; // Example file path
+        QString filePath = QString("uploads/uploaded_file_%1.txt").arg(QDateTime::currentDateTime().toString("yyyyMMdd_HHmmss_zzz"));
         QFile file(filePath);
         if (file.open(QIODevice::WriteOnly)) {
             file.write(request.body());
@@ -89,6 +89,8 @@ Server::Server(QObject *parent) : QObject(parent), server(new QHttpServer(this))
             QJsonObject response;
             response["token"] = token;
             response["role"] = role;
+            // qDebug() << "Generated token:" << token;
+            qDebug() << "Response JSON:" << QJsonDocument(response).toJson();
 
             return QHttpServerResponse(QJsonDocument(response).toJson(), QHttpServerResponse::StatusCode::Ok);
         }
